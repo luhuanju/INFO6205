@@ -1,8 +1,38 @@
 package assignment1;
 
+import java.util.Arrays;
+
 public class Assignment1 {
 
     public class Problem1{
+
+
+        private int[] sortColors(int nums[]){
+
+            int left=0;
+
+            for(int i=0;i<nums.length;i++){
+                if(nums[i]==0){
+                    nums[i]=nums[left];
+                    nums[left]=0;
+                    left++;
+                }
+            }
+
+            for(int i=left;i<nums.length;i++){
+                if(nums[i]==1){
+                    nums[i]=nums[left];
+                    nums[left]=1;
+                    left++;
+                }
+            }
+
+            return nums;
+        }
+
+
+
+
 
 
     }
@@ -10,12 +40,46 @@ public class Assignment1 {
 
     public class Problem2{
 
+        /**
+         * Pro 2
+         *Given an array of meeting timeintervalswhereintervals[i] = [starti, endi],
+         * determine if a person could attend all meetings.
+         *
+         * @param inteverl
+         * @return
+         */
+        private boolean attendanceHelper (int inteverl[][]){
+            Arrays.sort(inteverl,(int a[],int b[])->a[0]-b[0]);
+            System.out.println(Arrays.asList(inteverl).toString());
+            for (int i=1;i< inteverl.length;++i){
+                if (inteverl[i-1] [1]>inteverl[i][0])
+                    return false;
+            }
+            return true;
+        };
 
     }
 
     public class Problem3{
 
-
+        /**
+         *
+         * @param nums
+         * @return
+         */
+        public int arrayPair(int[] nums) {
+            int n=nums.length;
+            // [1,3,2,4]
+            int i =0;
+            int min=0;
+            Arrays.sort(nums);
+            // [1,2,3,4]
+            while(i<n-1){
+                min+= nums[i];
+                i+=2;
+            }
+            return min;
+        }
     }
 
     public class Problem4{
