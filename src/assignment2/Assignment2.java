@@ -6,10 +6,8 @@ public class Assignment2 {
 
 
     /**
-     * Problem 1
-     * @param nums
-     * @param target
-     * @return
+     * Time Complexity: O(n) : for one pass
+     * Space Complexity: O(n) :  for map
      */
     public int[] twoSum(int[] nums, int target) {
 
@@ -25,9 +23,8 @@ public class Assignment2 {
 
 
     /**
-     * problem 2
-     * @param intervals
-     * @return
+     * Time Complexity: O(n logN) + O(n) =  O(n logN): for Array.sort()
+     * Space Complexity: O(n) :
      */
     public int meetingRoom(int[][] intervals) {
         int[]start = new int[intervals.length];
@@ -53,10 +50,8 @@ public class Assignment2 {
 
 
     /**
-     * Problem 3
-     * @param nums1
-     * @param nums2
-     * @return
+     * Time Complexity: O(n): for two pass
+     * Space Complexity: O(n) :  for Set store
      */
     public int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> hash=new HashSet<>();
@@ -80,9 +75,9 @@ public class Assignment2 {
 
 
     /**
-     * Problem 4
-     * @param nums
-     * @return
+     * Vote algorithm
+     * Time Complexity: O(n): for two pass
+     * Space Complexity: O(n) :
      */
     public List<Integer> majority(int[] nums) {
         int count1=0;
@@ -132,10 +127,8 @@ public class Assignment2 {
     }
 
     /**
-     * Problem 5
-     * @param nums
-     * @param target
-     * @return
+     * Time Complexity: O(log N): for two binary search
+     * Space Complexity: O(1) :
      */
 
     public int[] searchRange(int[] nums, int target) {
@@ -177,11 +170,10 @@ public class Assignment2 {
 
 
     /**
-     * Problems 6
-     *
-     * @param grid
-     * @return
+     * Time Complexity: O(n log N):run binary for each row
+     * Space Complexity: O(1) :
      */
+
     public int countNegatives(int[][] grid)
     {
         //  binary search: check the first negative element at each row.
@@ -206,10 +198,10 @@ public class Assignment2 {
 
 
     /**
-     * Problems 7
-     * @param nums
-     * @return
+     * Time Complexity: O(log N): for binary search
+     * Space Complexity: O(1)
      */
+
     public int findPeakElement(int[] nums) {
 
         int start=0,end=nums.length-1;
@@ -225,11 +217,10 @@ public class Assignment2 {
 
     }
     /**
-     *
-     * Pro 8
-     * @param nums
-     * @return
+     * Time Complexity: O(n): for one pass
+     * Space Complexity: O(1)
      */
+
     public int findDuplicate(int[] nums) {
         for(int i=0;i<nums.length;i++){
             int index=Math.abs(nums[i]);
@@ -240,10 +231,8 @@ public class Assignment2 {
     }
 
     /**
-     * Problem 9
-     * @param arr
-     * @param k
-     * @return
+     * Time Complexity: O(n)
+     * Space Complexity: O(1)
      */
     public int findKthPositive(int[] arr, int k) {
         int n = 1, i = 0;
