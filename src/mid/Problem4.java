@@ -50,6 +50,7 @@ public class Problem4 {
 
         n7.left=n14;
         n7.right=n15;
+
         printNodes(root);
 
     }
@@ -84,5 +85,6 @@ public class Problem4 {
 
         }
     }
+
 
 }
