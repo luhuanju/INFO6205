@@ -6,7 +6,7 @@ public class Problem1 {
 
     public static void main(String[] args) {
         int[] arr=new int[]{0,1,0,2,3,4,5};
-        helper(arr);
+        exchange(arr);
 
     }
 
@@ -14,7 +14,7 @@ public class Problem1 {
      * T : O(n)
      * S : O(1)
      */
-    public static void helper( int[] arr){
+    public static void exchange( int[] arr){
 
         int i=0,j=0;
         int n=arr.length;
