@@ -57,7 +57,7 @@ public class Problem4 {
 
     /**
      * T: O (n)
-     * S: O(n) : n is mean By level
+     * S: O (n) : n is mean By level
      *
      */
     static void printNodes(TreeNode root){
