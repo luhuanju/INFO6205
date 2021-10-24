@@ -9,25 +9,33 @@ public class Problem3 {
     }
 
     public ListNode detectCycleAndFindMid(ListNode head) {
-        if (head == null || head.next==null) return null;
-        ListNode fast = head;
         ListNode slow = head;
-        while (fast!=null) {
-            fast = fast.next;
-            if (fast!=null) {
-                fast = fast.next;
-                slow = slow.next;
-            }
-            if (fast == slow) {
+        ListNode fast = head;
+        while (true) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow ==fast) {
                 break;
             }
         }
-        if (fast == null) return null;
-        fast = head;
-        while (fast != slow) {
-            fast = fast.next;
+        slow = head;
+        while (true) {
             slow = slow.next;
+            fast = fast.next;
+            if (slow == fast) {
+                break;
+            }
         }
-        return fast;
+        while (fast.next != slow) {
+            fast = fast.next;
+        }
+        fast.next = null;
+        ListNode first = head;
+        ListNode second = head;
+        while (second!=null) {
+            first = first.next;
+            second = second.next.next;
+        }
+        return first;
     }
 }
