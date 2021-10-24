@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class Problem1 {
 
     public static void main(String[] args) {
-
         int[] arr=new int[]{0,1,0,2,3,4,5};
         helper(arr);
 
@@ -25,8 +24,9 @@ public class Problem1 {
                arr[i++]=arr[j];
            }
        }
-       while (i<n) arr[i++]=0;
-
+       for(;i<n;i++){
+           arr[i]=0;
+        }
        System.out.println(Arrays.toString(arr));
     }
 }
